@@ -30,9 +30,7 @@ function Shop() {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 {product.map((product) => {
                     return (
-                        <Link to={`/itemDetail/${product.id}`}
-                        key={product.id}
-                        >
+                        
                             <ProductCard
                                 key={product.id}
                                 id={product.id}
@@ -44,7 +42,6 @@ function Shop() {
                                 price={product.price}
                                 img={product.img}
                             />
-                        </Link>
                     );
                 })}
             </div>

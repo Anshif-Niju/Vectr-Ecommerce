@@ -11,6 +11,7 @@ export default function Navbar() {
         window.scrollTo({ top: 0, behavior: "smooth" });
         setOpen(false);
     };
+    
 
     const logOut = () => {
         sessionStorage.removeItem("user");

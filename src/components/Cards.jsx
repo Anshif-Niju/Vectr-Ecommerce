@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function ProductCard({ id,title, price, img ,smallDes,category,rent,description}) {
     const [qty, setQty] = useState(0);
@@ -8,11 +9,15 @@ function ProductCard({ id,title, price, img ,smallDes,category,rent,description}
 
         <div className="bg-white/5 border border-white/10 rounded-xl p-4 shadow hover:scale-105 transition">
             {/* Image */}
+          <Link to={`/itemDetail/${id}`}
+          key={id}
+          >
             <img src={img} alt={title} className="w-full h-40 object-cover rounded-lg" />
 
             <h2 className="text-lg font-semibold mt-3">{title}</h2>
             <p className="text-gray-400 text-sm mb-4">{smallDes}</p>
             <p className="text-purple-400 font-bold text-xl mt-1">₹{price}</p>
+            </Link>
 
             {/* Quantity */}
             <div className="flex items-center gap-3 mt-3">

@@ -36,7 +36,7 @@ function Feedback() {
         setMessage("Your Valuable Feedback Added,Thank you");
     };
     return (
-        <section className="w-full flex justify-center items-center py-24 bg-gradient-to-br from-slate-950 via-slate-900 to-black">
+        <section id="feedback" className="w-full flex justify-center items-center py-24 bg-gradient-to-br from-slate-950 via-slate-900 to-black">
             <div className="w-full max-w-2xl mx-4 bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl shadow-2xl p-10">
                 <h2 className="text-3xl font-bold text-white text-center">We Value Your Feedback</h2>
 

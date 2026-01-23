@@ -36,7 +36,7 @@
     {
       "id": "2",
       "name":"Apple iPhone 16",
-      "img": "/src/assets/product/Apple MacBook Air M4.png",
+      "img": "/src/assets/product/Iphone.png",
       "price": 64900,
       "rent": 800,
       "description": "The Apple iPhone 16 is Apple’s latest next-generation smartphone designed for powerful performance, stunning photography, and intelligent features. It comes with a beautiful 6.1-inch Super Retina XDR OLED display that delivers vibrant colors, deep blacks, and high brightness, making it perfect for watching videos, gaming, and everyday use.Powered by the new Apple A18 chip, the iPhone 16 offers faster performance, smoother multitasking, and improved battery efficiency. Whether you are playing games, editing videos, or using AI-powered apps, it delivers a smooth and lag-free experience.The iPhone 16 features an advanced 48MP dual-camera system with ultra-wide lens support, allowing you to capture stunning photos and videos in any lighting condition. With improved night mode, macro photography, and smart HDR, your pictures look professional. The 12MP front camera ensures high-quality selfies and clear video calls.Apple also introduced a new Camera Control button and Action button, giving quick access",
@@ -45,23 +45,23 @@
     },
     {
       "id": "3",
-      "name":"Apple MacBook Air M4",
-      "img": "/src/assets/product/Apple MacBook Air M4.png",
-      "price": 90990,
-      "rent": 1000,
-      "description": " The Apple MacBook Air M4 is a powerful, ultra-thin laptop designed for students, developers, creators, and everyday users who need speed and portability. Powered by Apple’s latest M4 chip, it delivers lightning-fast performance while maintaining excellent battery efficiency.This laptop features a stunning Liquid Retina display, offering vibrant colors, sharp text, and smooth visuals—perfect for coding, watching movies, and creative work. With its lightweight aluminum design, the MacBook Air M4 is easy to carry anywhere, making it ideal for travel and daily use.The M4 chip brings improved CPU, GPU, and AI performance, making multitasking, video editing, and software development faster and smoother than ever. It also includes a 12MP Center Stage camera, advanced speakers, and support for multiple external displays, making it great for meetings and productivity.With up to 18 hours of battery life, fast charging, and macOS optimization, the MacBook Air M4 is built to last all day on a single charge. ",
-      "smallDes":" The Apple MacBook Air M4 is a powerful ",
-      "category": "laptop"
+      "name":"TRIGGR Ultrabuds N5",
+      "img": "/src/assets/product/earbud.png",
+      "price": 599,
+      "rent": null,
+      "description":"The TRIGGR Ultrabuds N5 are advanced true wireless earbuds designed for immersive sound, long battery life, and seamless connectivity. Powered by the latest Bluetooth v6.0, these earbuds offer faster pairing, stable connection, and low power consumption for uninterrupted listening.Equipped with 13mm dynamic drivers, the Ultrabuds N5 delivers deep bass, clear mids, and crisp highs, making it perfect for music, movies, and gaming. With up to 40 hours of total playtime using the charging case, you can enjoy long listening sessions without frequent charging.",
+      "smallDes":" The TRIGGR Ultrabuds N5 is a good ",
+      "category": "earbud"
     },
     {
       "id": "4",
-      "name":"Apple MacBook Air M4",
-      "img": "/src/assets/product/Apple MacBook Air M4.png",
-      "price": 90990,
-      "rent": 1000,
-      "description": " The Apple MacBook Air M4 is a powerful, ultra-thin laptop designed for students, developers, creators, and everyday users who need speed and portability. Powered by Apple’s latest M4 chip, it delivers lightning-fast performance while maintaining excellent battery efficiency.This laptop features a stunning Liquid Retina display, offering vibrant colors, sharp text, and smooth visuals—perfect for coding, watching movies, and creative work. With its lightweight aluminum design, the MacBook Air M4 is easy to carry anywhere, making it ideal for travel and daily use.The M4 chip brings improved CPU, GPU, and AI performance, making multitasking, video editing, and software development faster and smoother than ever. It also includes a 12MP Center Stage camera, advanced speakers, and support for multiple external displays, making it great for meetings and productivity.With up to 18 hours of battery life, fast charging, and macOS optimization, the MacBook Air M4 is built to last all day on a single charge. ",
-      "smallDes":" The Apple MacBook Air M4 is a powerful ",
-      "category": "laptop"
+      "name":"TRIGGR Trinity 2 with Dual Pairing",
+      "img": "/src/assets/product/headset.png",
+      "price": 799,
+      "rent": null,
+      "description":"The TRIGGR Trinity 2 with Dual Pairing are advanced true wireless earbuds designed for immersive sound, long battery life, and seamless connectivity. Powered by the latest Bluetooth v6.0, these earbuds offer faster pairing, stable connection, and low power consumption for uninterrupted listening.Equipped with 13mm dynamic drivers, the Ultrabuds N5 delivers deep bass, clear mids, and crisp highs, making it perfect for music, movies, and gaming. With up to 40 hours of total playtime using the charging case, you can enjoy long listening sessions without frequent charging.",
+      "smallDes":" The TRIGGR Trinity 2 with Dual Pairing is a powerful ",
+      "category": "headset"
     },
     {
       "id": "5",
@@ -70,11 +70,41 @@
       "price": 90990,
       "rent": 1000,
       "description": " The Apple MacBook Air M4 is a powerful, ultra-thin laptop designed for students, developers, creators, and everyday users who need speed and portability. Powered by Apple’s latest M4 chip, it delivers lightning-fast performance while maintaining excellent battery efficiency.This laptop features a stunning Liquid Retina display, offering vibrant colors, sharp text, and smooth visuals—perfect for coding, watching movies, and creative work. With its lightweight aluminum design, the MacBook Air M4 is easy to carry anywhere, making it ideal for travel and daily use.The M4 chip brings improved CPU, GPU, and AI performance, making multitasking, video editing, and software development faster and smoother than ever. It also includes a 12MP Center Stage camera, advanced speakers, and support for multiple external displays, making it great for meetings and productivity.With up to 18 hours of battery life, fast charging, and macOS optimization, the MacBook Air M4 is built to last all day on a single charge. ",
-      "smallDes":" The Apple MacBook Air M4 is a powerful ",
+      "smallDes":" The Apple MacBook Air M4 is a powerful...",
       "category": "laptop"
     },
     {
       "id": "6",
+      "name":"Apple iPhone 16",
+      "img": "/src/assets/product/Iphone.png",
+      "price": 64900,
+      "rent": 800,
+      "description": "The Apple iPhone 16 is Apple’s latest next-generation smartphone designed for powerful performance, stunning photography, and intelligent features. It comes with a beautiful 6.1-inch Super Retina XDR OLED display that delivers vibrant colors, deep blacks, and high brightness, making it perfect for watching videos, gaming, and everyday use.Powered by the new Apple A18 chip, the iPhone 16 offers faster performance, smoother multitasking, and improved battery efficiency. Whether you are playing games, editing videos, or using AI-powered apps, it delivers a smooth and lag-free experience.The iPhone 16 features an advanced 48MP dual-camera system with ultra-wide lens support, allowing you to capture stunning photos and videos in any lighting condition. With improved night mode, macro photography, and smart HDR, your pictures look professional. The 12MP front camera ensures high-quality selfies and clear video calls.Apple also introduced a new Camera Control button and Action button, giving quick access",
+      "smallDes":" The Apple iPhone 16  is a good...",
+      "category": "phone"
+    },
+    {
+      "id": "7",
+      "name":"TRIGGR Ultrabuds N5",
+      "img": "/src/assets/product/earbud.png",
+      "price": 599,
+      "rent": null,
+      "description":"The TRIGGR Ultrabuds N5 are advanced true wireless earbuds designed for immersive sound, long battery life, and seamless connectivity. Powered by the latest Bluetooth v6.0, these earbuds offer faster pairing, stable connection, and low power consumption for uninterrupted listening.Equipped with 13mm dynamic drivers, the Ultrabuds N5 delivers deep bass, clear mids, and crisp highs, making it perfect for music, movies, and gaming. With up to 40 hours of total playtime using the charging case, you can enjoy long listening sessions without frequent charging.",
+      "smallDes":" The TRIGGR Ultrabuds N5 is a good ",
+      "category": "earbud"
+    },
+    {
+      "id": "8",
+      "name":"TRIGGR Trinity 2 with Dual Pairing",
+      "img": "/src/assets/product/headset.png",
+      "price": 799,
+      "rent": null,
+      "description":"The TRIGGR Trinity 2 with Dual Pairing are advanced true wireless earbuds designed for immersive sound, long battery life, and seamless connectivity. Powered by the latest Bluetooth v6.0, these earbuds offer faster pairing, stable connection, and low power consumption for uninterrupted listening.Equipped with 13mm dynamic drivers, the Ultrabuds N5 delivers deep bass, clear mids, and crisp highs, making it perfect for music, movies, and gaming. With up to 40 hours of total playtime using the charging case, you can enjoy long listening sessions without frequent charging.",
+      "smallDes":" The TRIGGR Trinity 2 with Dual Pairing is a powerful ",
+      "category": "headset"
+    },
+    {
+      "id": "9",
       "name":"Apple MacBook Air M4",
       "img": "/src/assets/product/Apple MacBook Air M4.png",
       "price": 90990,
@@ -84,7 +114,17 @@
       "category": "laptop"
     },
     {
-      "id": "7",
+      "id": "10",
+      "name":"Apple MacBook Air M4",
+      "img": "/src/assets/product/Apple MacBook Air M4.png",
+      "price": 90990,
+      "rent": 1000,
+      "description": " The Apple MacBook Air M4 is a powerful, ultra-thin laptop designed for students, developers, creators, and everyday users who need speed and portability. Powered by Apple’s latest M4 chip, it delivers lightning-fast performance while maintaining excellent battery efficiency.This laptop features a stunning Liquid Retina display, offering vibrant colors, sharp text, and smooth visuals—perfect for coding, watching movies, and creative work. With its lightweight aluminum design, the MacBook Air M4 is easy to carry anywhere, making it ideal for travel and daily use.The M4 chip brings improved CPU, GPU, and AI performance, making multitasking, video editing, and software development faster and smoother than ever. It also includes a 12MP Center Stage camera, advanced speakers, and support for multiple external displays, making it great for meetings and productivity.With up to 18 hours of battery life, fast charging, and macOS optimization, the MacBook Air M4 is built to last all day on a single charge. ",
+      "smallDes":" The Apple MacBook Air M4 is a powerful ",
+      "category": "laptop"
+    },
+    {
+      "id": "11",
       "name":"Apple MacBook Air M4",
       "img": "/src/assets/product/Apple MacBook Air M4.png",
       "price": 90990,
@@ -95,7 +135,7 @@
     }
     ,
     {
-      "id": "8",
+      "id": "12",
       "name":"Apple MacBook Air M4",
       "img": "/src/assets/product/Apple MacBook Air M4.png",
       "price": 90990,

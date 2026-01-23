@@ -28,7 +28,7 @@ function ProductDetails() {
         };
         fetchSingleItem();
     }, [id]);
-    console.log(product)
+
 
     if (loading) {
         return (
@@ -62,9 +62,18 @@ function ProductDetails() {
             >
                 ← Back to Shop
             </button>
+            <button
+                onClick={() => {
+                    navigate("/home");
+                }}
+                className="mb-6 absolute right-5 text-purple-400 hover:underline"
+            >
+                ← Back to Home
+            </button>
 
             <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
                 {/* IMAGE SECTION */}
+
                 <div className="bg-slate-800/40 p-6 rounded-2xl shadow-xl">
                     <img src={product.img} alt="MacBook" className="w-full  rounded-xl object-cover" />
                 </div>
@@ -81,7 +90,8 @@ function ProductDetails() {
                     {/* Quantity */}
                     <div className="flex items-center gap-3">
                         <button className="bg-slate-700 px-3 py-1 rounded text-xl" 
-                        onClick={()=>{
+                        onClick={(e)=>{
+                            e.stopPropagation();
                             if(qty==0){
                              setMsg("Minimum size reached")
                              return
@@ -92,7 +102,8 @@ function ProductDetails() {
                         >-</button>
                         <span className="text-lg font-bold">{qty}</span>
                         <button className="bg-slate-700 px-3 py-1 rounded text-xl"
-                        onClick={()=>{
+                        onClick={(e)=>{
+                             e.stopPropagation();
                             if(qty==10){
                              setMsg("Maximum size reached")
                              return
@@ -113,9 +124,12 @@ function ProductDetails() {
                         <button className="bg-green-600 hover:bg-green-700 px-6 py-3 rounded-xl font-semibold">
                             Buy Now
                         </button>
+                      
+                        <button className={(product.rent==null)?"bg-gray-600 cursor-not-allowed px-6 py-3 rounded-xl font-semibold":"bg-green-600 hover:bg-green-700 px-6 py-3 rounded-xl font-semibold"}>
+                            {
+                                (product.rent==null)?"No rent available":"Rent Now"
 
-                        <button className="bg-green-600 hover:bg-green-700 px-6 py-3 rounded-xl font-semibold">
-                            Rent Now
+                            }
                         </button>
                     </div>
 
