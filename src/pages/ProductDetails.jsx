@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import api from "../api/api";
+import api from "../service/api";
 
 function ProductDetails() {
 
@@ -72,23 +72,20 @@ function ProductDetails() {
             </button>
 
             <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
-                {/* IMAGE SECTION */}
 
                 <div className="bg-slate-800/40 p-6 rounded-2xl shadow-xl">
-                    <img src={product.img} alt="MacBook" className="w-full  rounded-xl object-cover" />
+                    <img loading="lazy" src={product.img} alt="MacBook" className="w-full  rounded-xl object-cover" />
                 </div>
 
-                {/* DETAILS SECTION */}
                 <div className="space-y-6">
                     <h1 className="text-3xl font-bold text-purple-400">{product.name}</h1>
 
                     <p className="text-gray-300">{product.description}</p>
 
-                    {/* Price */}
                     <h2 className="text-2xl font-bold text-green-400">{product.price}</h2>
 
-                    {/* Quantity */}
                     <div className="flex items-center gap-3">
+                        
                         <button className="bg-slate-700 px-3 py-1 rounded text-xl" 
                         onClick={(e)=>{
                             e.stopPropagation();
@@ -115,7 +112,6 @@ function ProductDetails() {
                         <p className="text-red-500 text-sm mt-2">{msg}</p>
                     </div>
 
-                    {/* Buttons */}
                     <div className="flex gap-4 mt-4">
                         <button className="bg-purple-600 hover:bg-purple-700 px-6 py-3 rounded-xl font-semibold">
                             Add to Cart
@@ -133,7 +129,6 @@ function ProductDetails() {
                         </button>
                     </div>
 
-                    {/* Extra Info */}
                     <div className="bg-slate-800/50 p-4 rounded-xl mt-6">
                         <h3 className="text-lg font-semibold mb-2 ">Category</h3>
                         <h2 className="text-sm font-semibold mb-2 uppercase">#{product.category}</h2>

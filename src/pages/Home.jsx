@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import {Link} from "react-router-dom"
+import {getHomeProduct} from "../service/authService";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Feedback from "../components/Feedback";
-import api from "../api/api";
+import HomeCard from "../components/HomeCard";
 
 function Home() {
    
@@ -13,8 +14,8 @@ const [product,setProduct]=useState([])
 
     const fetchProducts=async ()=>{   
 
-    const res=await api.get("/products?_limit=6")
-    setProduct(res.data) 
+    const res=await getHomeProduct("limit=6")
+    setProduct(res) 
 
     }
     fetchProducts()
@@ -29,7 +30,6 @@ const [product,setProduct]=useState([])
             <Navbar />
 
             <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-black text-white overflow-hidden">
-                {/* HERO SECTION */}
 
                 <section className="relative  px-6 py-24 max-w-7xl mx-auto">
                     <div className="absolute  inset-0 -z-10 bg-[radial-gradient(circle_at_top,_#0f172a,_transparent_60%)]"></div>
@@ -56,15 +56,15 @@ const [product,setProduct]=useState([])
                         <div className="relative">
                             <div className="absolute inset-0 bg-indigo-500/20 blur-3xl rounded-full"></div>
                             <img
-                                src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8"
+                               loading="lazy"
+                                src="https://images.unsplash.com/photo-1593642532744-d377ab507dc8?w=1000&q=80&auto=format&fit=crop"
                                 alt="electronics"
-                                className="relative rounded-3xl shadow-2xl animate-float"
+                                className="relative rounded-3xl shadow-2xl animate-float will-change-transform"
                             />
                         </div>
                     </div>
                 </section>
 
-                {/* FEATURE STRIP */}
 
                 <section className="py-12 border-t border-white/10 bg-black/40 backdrop-blur">
                     <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 px-6">
@@ -76,7 +76,6 @@ const [product,setProduct]=useState([])
                     </div>
                 </section>
 
-                {/* PRODUCTS */}
 
                 <section className="py-24 max-w-7xl mx-auto px-6">
                     <h2 className="text-4xl font-bold mb-12 text-center">Trending Electronics</h2>
@@ -84,26 +83,7 @@ const [product,setProduct]=useState([])
 
                         {product.map((product) => (
 
-                            <div
-                                key={product.id}
-                                className={`
-        group rounded-3xl bg-gradient-to-b from-white/10 to-white/5
-        p-6 backdrop-blur-xl hover:scale-[1.03] transition duration-300
-        ${product.id >= 5 ? "hidden md:block" : "block"}
-      `}
-                            >
-                                <img className="w-full h-48 rounded-2xl bg-black/40 mb-4" src={product.img}></img>
-                                <h3 className="text-xl font-semibold mb-1">{product.name}</h3>
-                                <p className="text-gray-400 text-sm mb-4">
-                                    {product.smallDes}
-                                </p>
-                                <div className="flex justify-between items-center">
-                                    <span className="text-indigo-400 font-semibold">{product.price}</span>
-                                    <button className="px-4 py-2 rounded-lg bg-indigo-500/20 hover:bg-indigo-500/40 transition">
-                                        <Link to={`/itemDetail/${product.id}`}>View</Link>
-                                    </button>
-                                </div>
-                            </div>
+                            <HomeCard key={product.id} product={product}/>
                         ))}
                     </div>
                 </section>

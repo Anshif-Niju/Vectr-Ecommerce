@@ -6,6 +6,7 @@ import Forget from "./pages/Forget";
 import NotFound from "./pages/NotFound";
 import Shop from "./pages/Shop";
 import ProductDetails from "./pages/ProductDetails";
+import Cart from "./pages/Cart";
 
 const PublicRoutes = () => {
     const user = JSON.parse(sessionStorage.getItem("user"));
@@ -31,6 +32,7 @@ function App() {
                 <Route path="/home" element={<Home />} />
                 <Route path="/shop" element={<Shop />} />
                 <Route path="/itemDetail/:id" element={<ProductDetails />} />
+                <Route path="/cart" element={<Cart />} />
             </Route>
 
             <Route path="*" element={<NotFound />} />

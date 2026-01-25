@@ -12,7 +12,7 @@ function ProductCard({ id,title, price, img ,smallDes,category,rent,description}
           <Link to={`/itemDetail/${id}`}
           key={id}
           >
-            <img src={img} alt={title} className="w-full h-40 object-cover rounded-lg" />
+            <img loading="lazy" src={img} alt={title} className="w-full h-40 object-cover rounded-lg" />
 
             <h2 className="text-lg font-semibold mt-3">{title}</h2>
             <p className="text-gray-400 text-sm mb-4">{smallDes}</p>
