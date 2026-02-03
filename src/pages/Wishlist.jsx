@@ -4,7 +4,7 @@ import { getUserProduct } from '../service/authService';
 import { useUser } from '../context/UserContext';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import Cards from '../components/Cards';
+import Cards from '../components/ShopCards';
 
 function Wishlist() {
   const [userPro, setUserPro] = useState([]);

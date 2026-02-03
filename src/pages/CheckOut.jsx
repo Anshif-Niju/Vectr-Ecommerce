@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 import CheckoutCard from '../components/CheckoutCard';
 import { useCart } from '../context/CartContext';
 import { useUser } from '../context/UserContext';
-import { toast } from 'react-hot-toast';
+import { toast } from 'react-toastify';
 import api from '../service/api';
 
 function Checkout() {
@@ -18,7 +18,7 @@ function Checkout() {
     address: '',
   });
   const [payment, setPayment] = useState(null);
-  const { cart, totalPrice } = useCart();
+  const { cart,setCart, totalPrice } = useCart();
   const { user } = useUser();
 
   const handleChange = (e) => {
@@ -63,7 +63,7 @@ function Checkout() {
       });
 
       toast.success('Order Placed Succesfully');
-
+      setCart([])
       navigate('/myorders');
     } catch (error) {
       console.log(error);

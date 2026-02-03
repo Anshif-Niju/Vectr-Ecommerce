@@ -16,7 +16,13 @@ export const useLogin = () => {
 
   useEffect(() => {
     if (user) {
-      navigate('/home');
+      if (user.role == 'admin') {
+        toast.success("Welcome Admin")
+        navigate('/admin/dashboard', { replace: true });
+      } else {
+        toast.success("Welcome Back")
+        navigate('/home', { replace: true });
+      }
     }
   }, [user]);
 
@@ -32,20 +38,22 @@ export const useLogin = () => {
 
     setError('');
 
-    try {
-      const res = await getUserByEmail(formData.email);
-
-      if (formData.email == '' || formData.pass == '') {
+     if (formData.email == '' || formData.pass == '') {
         setError('All fields are required');
         return;
       }
 
+    try {
+      
+     
+      const res = await getUserByEmail(formData.email);
+
       if (res.length === 0) {
         setError('User not found. Please register');
-        setFormData({
-          email: '',
-          pass: '',
-        });
+        // setFormData({
+        //   email: '',
+        //   pass: '',
+        // });
         return;
       }
 
@@ -60,7 +68,6 @@ export const useLogin = () => {
       }
 
       login(loggedUser);
-      navigate('/home', { replace: true });
     } catch (error) {
       setError('The Server is not responding....');
     }

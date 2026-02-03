@@ -168,9 +168,7 @@ function ProductDetails() {
 
             <div className="flex flex-wrap gap-4 pt-4 border-t border-slate-200">
               <AddCart product={product} qty={qty} />
-              <button className="width-40 bg-[#1D3557] w-40 hover:bg-[#0f1f38] text-white px-8 py-4  rounded-xl font-bold shadow-lg  transition-all hover:-translate-y-1">
-                Buy Now
-              </button>
+              
             </div>
 
             <div className="bg-white border border-slate-200 p-6 rounded-2xl shadow-sm mt-8">

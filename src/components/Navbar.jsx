@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { FaRegHeart } from 'react-icons/fa';
 import { NavLink, useNavigate } from 'react-router-dom';
 import vectrLogo from '../assets/img/Vectr.png';
 import { useCart } from '../context/CartContext';
@@ -83,7 +84,7 @@ export default function Navbar() {
             </li>
             <li className="hover:text-[#457b9d] transition-colors relative group">
               <NavLink
-                to="/wishlist"
+                to="/myorders"
                 className={({ isActive }) =>
                   `relative group transition-colors ${
                     isActive
@@ -92,7 +93,7 @@ export default function Navbar() {
                   }`
                 }
               >
-                Whislist
+                My Orders
               </NavLink>
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#457b9d] transition-all group-hover:w-full"></span>
             </li>
@@ -114,12 +115,19 @@ export default function Navbar() {
           </ul>
 
           <div className="flex items-center gap-4">
+            <div className="relative group cursor-pointer">
             <NavLink
-              to="/myorders"
-              className="hidden h-9 sm:block px-5 py-2 text-white text-sm font-bold rounded-full bg-[#457b9d] hover:bg-[#36607a] shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5"
+              to="/wishlist"
+              className="h-10 w-10 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 transition flex items-center justify-center"
             >
-              My Orders
+              <div className="h-10 w-10 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 transition flex items-center justify-center">
+                <FaRegHeart />
+              </div>
+              {/* <span className="absolute top-[-4px] right-[-5px] h-5 w-5 rounded-full bg-[#1D3557] text-white text-[10px] font-bold flex items-center justify-center border-2 border-white">
+                0
+              </span> */}
             </NavLink>
+            </div>
 
             <div className="relative group cursor-pointer">
               <NavLink to="/cart">
@@ -221,7 +229,7 @@ export default function Navbar() {
                   to=""
                   className="block text-lg font-medium hover:font-bold text-slate-600 py-2"
                 >
-                  Rent
+                  Whilist
                 </NavLink>
               </li>
               <li>
@@ -231,11 +239,6 @@ export default function Navbar() {
                 >
                   Support
                 </NavLink>
-              </li>
-              <li className="pt-4 border-t border-slate-100">
-                <button className="w-full py-3 rounded-xl bg-[#457b9d] text-white font-bold shadow-lg">
-                  Rent Now
-                </button>
               </li>
             </ul>
           </div>

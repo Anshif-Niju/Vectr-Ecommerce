@@ -12,7 +12,7 @@ function CheckoutCard() {
 
         return (
     <div key={item.id} className="lg:col-span-2 space-y-6">
-      <div className="flex gap-6 bg-white border border-slate-200 p-4 rounded-[2rem] shadow-sm hover:shadow-md transition-shadow">
+      <div className="flex  gap-6 bg-white border border-slate-200 p-4 rounded-[2rem] shadow-sm hover:shadow-md transition-shadow">
         <img
           src={item.product.img}
           className="w-32 h-32 rounded-3xl object-cover bg-slate-100"
@@ -25,12 +25,13 @@ function CheckoutCard() {
             {item.product.smallDes}
           </p>
 
-          <div className="flex items-center gap-6 mt-4">
+              <div className="flex w-full justify-between  items-center gap-6 mt-4">
             <span className="text-[#457b9d] font-black text-xl">
               {item.product.price}
             </span>
 
             <span className="text-[#457b9d] font-black text-xl">Quantity: {item.size}</span>
+            <span className="text-[#457b9d]   font-black text-xl">Total: {item.product.price*item.size}</span>
           </div>
         </div>
         <button

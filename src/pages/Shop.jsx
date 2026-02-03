@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import api from '../service/api';
-import ProductCard from '../components/Cards';
+import ProductCard from '../components/ShopCards';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 

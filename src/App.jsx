@@ -10,23 +10,63 @@ import Cart from './pages/Cart';
 import Wishlist from './pages/Wishlist';
 import CheckOut from './pages/CheckOut';
 import MyOrders from './pages/MyOrders';
-import { Toaster } from 'react-hot-toast';
+import Dashboard from './pages/admin/SideBar';
+import UserList from './pages/admin/UserList';
+import ScrollTop from './components/ScrollTop';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+const ProtectedRoutes = () => {
+  const user = JSON.parse(sessionStorage.getItem('user'));
+  if (!user) return <Navigate to="/login" />;
+
+  if (user.role !== 'admin') return <Navigate to="/home" />;
+  return <Outlet />;
+};
 
 const PublicRoutes = () => {
   const user = JSON.parse(sessionStorage.getItem('user'));
-  return user ? <Navigate to="/home" /> : <Outlet />;
+  if (user) {
+    if (user.role == 'admin') {
+     return <Navigate to="/admin/dashboard" />;
+    }
+   return <Navigate to="/home" />;
+  }
+  return <Outlet />;
 };
 
 const PrivateRoutes = () => {
   const user = JSON.parse(sessionStorage.getItem('user'));
-  return user ? <Outlet /> : <Navigate to="/login" />;
+  if (!user) {
+   return <Navigate to="/login" />;
+  }
+  if (user.role === 'admin') return <Navigate to="/admin/dashboard" />;
+  return <Outlet />;
 };
 
 function App() {
   return (
     <>
-      <Toaster position="top-center" reverseOrder={false}></Toaster>
+      <ScrollTop />
+      <ToastContainer
+        position="top-center"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={true}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+        limit={1}
+      />
       <Routes>
+        <Route element={<ProtectedRoutes />}>
+          <Route path="/admin/dashboard" element={<Dashboard />} />
+          <Route path="/admin/userlist" element={<UserList />} />
+        </Route>
+
         <Route element={<PublicRoutes />}>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />

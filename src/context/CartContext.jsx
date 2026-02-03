@@ -1,7 +1,7 @@
 import { createContext, useContext, useState, useEffect } from 'react';
 import api from '../service/api';
 import { useUser } from '../context/UserContext';
-import toast from 'react-hot-toast';
+import {toast} from 'react-toastify';
 
 const CartContext = createContext();
 
@@ -13,16 +13,12 @@ export const CartProvider = ({ children }) => {
     const fetchCart = async () => {
       try {
         if (!user) {
+          setCart([])
           return;
         }
 
         const res = await api.get(`/Cart?userId=${user.id}`);
-        if (res.data.length > 0) {
           setCart(res.data);
-          console.log(res.data);
-        } else {
-          console.log('Cart is empty');
-        }
       } catch (error) {
         console.error(error);
       }

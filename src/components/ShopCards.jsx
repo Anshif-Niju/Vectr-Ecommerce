@@ -79,9 +79,7 @@ function ProductCard({ product }) {
 
       <div className="flex gap-3 mt-5 w-full">
         <AddCart product={product} qty={qty} />
-        <button className="px-5 py-2.5 border-2 border-[#1D3557] text-[#1D3557] rounded-xl font-bold hover:bg-[#1D3557] hover:text-white transition-all duration-300 text-sm">
-          Buy
-        </button>
+        
       </div>
     </div>
   );

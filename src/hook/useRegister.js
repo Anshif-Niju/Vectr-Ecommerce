@@ -1,12 +1,13 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import api from '../service/api';
 
 export const useRegister = () => {
   const navigate = useNavigate();
 
   const nameRegex = /^[A-Za-z ]{2,}$/;
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
 
   const [formData, setFormData] = useState({
     name: '',
@@ -29,27 +30,28 @@ export const useRegister = () => {
     setError('');
 
     if (!nameRegex.test(formData.name)) {
-      setError('Invalid name');
+      toast.error('Invalid name');
       return;
     }
 
     if (!emailRegex.test(formData.email)) {
-      setError('Invalid email');
+      toast.error('Invalid email');
       return;
     }
     if (formData.password == '') {
-      setError('Please enter password');
+      toast.error('Please enter password');
       return;
     }
 
     try {
       const res = await api.get(`/users?email=${formData.email}`);
       if (res.data.length > 0) {
-        setError('The email is already taken');
+        toast.error('The email is already taken');
         return;
       }
 
       await api.post('/users', formData);
+      toast.success("Registration Succeful")
       navigate('/login');
     } catch (error) {
       console.log('Oops!' + error);
