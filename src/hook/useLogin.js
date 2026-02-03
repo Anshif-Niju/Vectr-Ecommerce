@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { getUserByEmail } from '../service/authService';
 import { useUser } from '../context/UserContext';
+import { toast } from 'react-hot-toast';
 
 export const useLogin = () => {
   const navigate = useNavigate();
@@ -17,7 +18,7 @@ export const useLogin = () => {
   useEffect(() => {
     if (user) {
       if (user.role == 'admin') {
-        toast.success("Welcome Admin")
+        toast.success("Welcome Back Admin")
         navigate('/admin/dashboard', { replace: true });
       } else {
         toast.success("Welcome Back")
@@ -39,7 +40,7 @@ export const useLogin = () => {
     setError('');
 
      if (formData.email == '' || formData.pass == '') {
-        setError('All fields are required');
+        toast.error('All fields are required');
         return;
       }
 
@@ -49,7 +50,7 @@ export const useLogin = () => {
       const res = await getUserByEmail(formData.email);
 
       if (res.length === 0) {
-        setError('User not found. Please register');
+        toast.error('User not found. Please register');
         // setFormData({
         //   email: '',
         //   pass: '',
@@ -60,7 +61,7 @@ export const useLogin = () => {
       const loggedUser = res[0];
 
       if (loggedUser.password !== formData.pass) {
-        setError('Incorrect password');
+        toast.error('Incorrect password');
         setFormData({
           pass: '',
         });
@@ -69,7 +70,7 @@ export const useLogin = () => {
 
       login(loggedUser);
     } catch (error) {
-      setError('The Server is not responding....');
+      toast.error('The Server is not responding....');
     }
   };
   return { formData, handleChange, handleSubmit, error };

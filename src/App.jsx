@@ -47,7 +47,7 @@ function App() {
   return (
     <>
       <ScrollTop />
-      <Toaster position="top-center" reverseOrder={false}></Toaster>
+      <Toaster position="top-right" reverseOrder={false}></Toaster>
 
       <Routes>
         <Route element={<ProtectedRoutes />}>
