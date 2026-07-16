@@ -6,7 +6,7 @@ const getPopulatedCart = async (userId) => {
   return cart.map((item) => ({ ...item, product: item.productId || null }));
 };
 
-export const getCart = async (req, res) => {
+export const useGetCart = async (req, res) => {
   try {
     if (!req.user?._id) {
       return res.status(401).json({ message: 'Authentication required' });
